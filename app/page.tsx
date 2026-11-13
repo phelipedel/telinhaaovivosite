@@ -13,6 +13,10 @@ import {
   Zap,
 } from 'lucide-react'
 
+// URLs diretas de alta velocidade via GitHub Media CDN (sem limitação de tamanho de 100MB da Vercel/Netlify)
+const WIN_DOWNLOAD_URL = 'https://media.githubusercontent.com/media/phelipedel/telinhaaovivosite/main/public/instalador/TelinhaAoVivo.exe'
+const APK_DOWNLOAD_URL = 'https://media.githubusercontent.com/media/phelipedel/telinhaaovivosite/main/public/instalador/TelinhaAoVivo.apk'
+
 const features = [
   {
     icon: Monitor,
@@ -65,10 +69,10 @@ export default function Page() {
               <a href="#chat">Chat</a>
             </div>
             <div className="nav-cta-group">
-              <a className="nav-cta" href="/instalador/TelinhaAoVivo Setup 0.0.5.exe" download="TelinhaAoVivo Setup 0.0.5.exe" title="Baixar para PC (Windows)">
+              <a className="nav-cta" href={WIN_DOWNLOAD_URL} download="TelinhaAoVivo-Setup-0.0.5.exe" title="Baixar para PC (Windows)">
                 <Monitor size={14} /> PC
               </a>
-              <a className="nav-cta nav-cta-apk" href="/instalador/TelinhaAoVivo.apk" download="TelinhaAoVivo.apk" title="Baixar APK para Android">
+              <a className="nav-cta nav-cta-apk" href={APK_DOWNLOAD_URL} download="TelinhaAoVivo.apk" title="Baixar APK para Android">
                 <Smartphone size={14} /> APK Android
               </a>
             </div>
@@ -81,10 +85,10 @@ export default function Page() {
             <h1>Sua tela.<br /><span>Ao vivo.</span> Sem complicação.</h1>
             <p className="hero-text">O TelinhaAoVivo conecta pessoas através da tela, com velocidade, privacidade e uma experiência que simplesmente funciona no seu computador e celular.</p>
             <div className="hero-actions">
-              <a className="button-primary" href="/instalador/TelinhaAoVivo Setup 0.0.5.exe" download="TelinhaAoVivo Setup 0.0.5.exe">
+              <a className="button-primary" href={WIN_DOWNLOAD_URL} download="TelinhaAoVivo-Setup-0.0.5.exe">
                 <Download size={18} /> Baixar para Windows <Monitor size={17} />
               </a>
-              <a className="button-secondary" href="/instalador/TelinhaAoVivo.apk" download="TelinhaAoVivo.apk">
+              <a className="button-secondary" href={APK_DOWNLOAD_URL} download="TelinhaAoVivo.apk">
                 <Download size={18} /> Baixar APK Android <Smartphone size={17} />
               </a>
               <a className="button-ghost" href="#como-funciona">Conheça o app <ChevronRight size={17} /></a>
@@ -126,10 +130,10 @@ export default function Page() {
               <p>Baixe o TelinhaAoVivo para o seu computador ou celular e conecte-se em poucos cliques.</p>
             </div>
             <div className="download-actions-grid">
-              <a className="button-primary large" href="/instalador/TelinhaAoVivo Setup 0.0.5.exe" download="TelinhaAoVivo Setup 0.0.5.exe">
+              <a className="button-primary large" href={WIN_DOWNLOAD_URL} download="TelinhaAoVivo-Setup-0.0.5.exe">
                 <Download size={19} /> Baixar para Windows <small>(PC .exe v0.0.5)</small>
               </a>
-              <a className="button-secondary large" href="/instalador/TelinhaAoVivo.apk" download="TelinhaAoVivo.apk">
+              <a className="button-secondary large" href={APK_DOWNLOAD_URL} download="TelinhaAoVivo.apk">
                 <Download size={19} /> Baixar APK Android <small>(.apk)</small>
               </a>
             </div>
@@ -148,7 +152,7 @@ export default function Page() {
           <span>Compartilhe o que importa.</span>
           <div className="footer-right">
             <span>© 2026 TelinhaAoVivo</span>
-            <a href="https://github.com" aria-label="GitHub"><GitBranch size={17} /></a>
+            <a href="https://github.com/phelipedel/telinhaaovivosite" aria-label="GitHub"><GitBranch size={17} /></a>
           </div>
         </footer>
       </div>
