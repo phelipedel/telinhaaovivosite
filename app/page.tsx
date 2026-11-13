@@ -21,6 +21,29 @@ import {
 const WIN_DOWNLOAD_URL = 'https://media.githubusercontent.com/media/phelipedel/telinhaaovivosite/main/public/instalador/TelinhaAoVivo.exe'
 const APK_DOWNLOAD_URL = 'https://media.githubusercontent.com/media/phelipedel/telinhaaovivosite/main/public/instalador/TelinhaAoVivo.apk'
 
+function TelinhaLogoIcon({ size = 30 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 28 28"
+      fill="none"
+      aria-hidden="true"
+      className="brand-icon-svg"
+    >
+      <path
+        d="M9 3l5 4 5-4"
+        stroke="#22D3EE"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <rect x="2" y="7" width="24" height="18" rx="6" fill="#22D3EE" />
+      <circle cx="14" cy="16" r="3.4" fill="#0B1220" />
+    </svg>
+  )
+}
+
 const features = [
   {
     icon: Globe,
@@ -62,7 +85,7 @@ export default function Page() {
           <nav className="nav container" aria-label="Navegação principal">
             <a href="#inicio" className="brand" aria-label="TelinhaAoVivo início">
               <span className="brand-mark">
-                <img src="/icon.png" alt="TelinhaAoVivo" className="brand-logo-img" />
+                <TelinhaLogoIcon size={32} />
               </span>
               <span>Telinha<span>AoVivo</span></span>
             </a>
@@ -222,7 +245,7 @@ export default function Page() {
         <footer className="footer container">
           <a href="#inicio" className="brand">
             <span className="brand-mark">
-              <img src="/icon.png" alt="TelinhaAoVivo" className="brand-logo-img" />
+              <TelinhaLogoIcon size={24} />
             </span>
             <span>Telinha<span>AoVivo</span></span>
           </a>

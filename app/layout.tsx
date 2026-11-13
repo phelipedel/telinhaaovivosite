@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   generator: 'TelinhaAoVivo',
   icons: {
     icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
       { url: '/icon.ico' },
       { url: '/icon.png', type: 'image/png' },
     ],
